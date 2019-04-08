@@ -65,7 +65,7 @@ $filter_response = curl_exec($filter_request);
 //decode json
 $filter_response_obj = json_decode($filter_response);
 
-        $response = array('fulfillmentText' => $filter_response_obj , "source"=>"webhook" );
+        $response = array('fulfillmentText' => $oauth_token , "source"=>"webhook" );
         echo json_encode($response);
 
 
